@@ -1,6 +1,6 @@
 # Pat Rapp
 
-[Pat Rapp](https://play.battlesnake.com/u/tphummel/pat-rapp/) is my third [battlesnake](https://play.battlesnake.com).
+[Pat Rapp](https://play.battlesnake.com/u/tphummel/pat-rapp/) is my fourth [battlesnake](https://play.battlesnake.com).
 
 ## "Features"
 
