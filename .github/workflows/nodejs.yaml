@@ -39,4 +39,4 @@ jobs:
           curl https://api.honeycomb.io/1/markers/tohu-battlesnake-pat-rapp \
             -X POST \
             -H "X-Honeycomb-Team: ${{ secrets.HONEYCOMB_KEY }}" \
-            -d '{"message":"$(git rev-parse --short main)", "type":"deploy"}'
+            -d '{"message":"'$BATTLESNAKE_VERSION'", "type":"deploy"}'
