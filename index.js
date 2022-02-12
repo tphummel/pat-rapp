@@ -211,7 +211,7 @@ if (isCloudFlareWorker) {
       const body = {
         apiversion: '1',
         author: 'tphummel',
-        color: '#ffc0cb',
+        color: '#e91e63',
         head: 'viper',
         tail: 'rattle',
         version: BATTLESNAKE_VERSION // eslint-disable-line
