@@ -10,5 +10,6 @@
   },
   "tap": {
     "check-coverage": false
-  }
+  },
+  main: "index.js"
 }
