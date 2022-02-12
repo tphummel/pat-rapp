@@ -2,3 +2,4 @@ name = "pat-rapp"
 type = "javascript"
 
 [env.production]
+routes = ["https://pat-rapp-battlesnake.tomhummel.com/*"]
