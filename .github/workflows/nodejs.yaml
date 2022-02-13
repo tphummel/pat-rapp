@@ -33,5 +33,4 @@ jobs:
         secrets: |
           BATTLESNAKE_VERSION
         postCommands: |
-          set -o xtrace
           curl https://api.honeycomb.io/1/markers/tohu-battlesnake-pat-rapp -X POST -H "X-Honeycomb-Team: ${{ secrets.HONEYCOMB_KEY }}" -d '{"message":"${{ env.BATTLESNAKE_VERSION }}", "type":"deploy"}'
