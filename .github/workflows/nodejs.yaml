@@ -17,11 +17,11 @@ jobs:
         npm test
       env:
         CI: true
-    - name: On master push, Deploy to Cloudflare Workers with Wrangler
+    - name: On master push, deploy to Cloudflare Workers with Wrangler
       if: github.ref == 'refs/heads/main'
       uses: cloudflare/wrangler-action@1.3.0
       env:
-        BATTLESNAKE_VERSION: $(git rev-parse --short main)
+        BATTLESNAKE_VERSION: ${{ env.GITHUB_SHA }}
         CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
         CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
       with:
@@ -33,4 +33,4 @@ jobs:
             curl https://api.honeycomb.io/1/markers/tohu-battlesnake-pat-rapp \
               -X POST \
               -H "X-Honeycomb-Team: ${{ secrets.HONEYCOMB_KEY }}" \
-              -d '{"message":"'$BATTLESNAKE_VERSION'", "type":"deploy"}'
+              -d '{"message":"${{ env.BATTLESNAKE_VERSION }}", "type":"deploy"}'
