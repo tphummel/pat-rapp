@@ -22,10 +22,10 @@ function move (reqBody) {
   const atSouthWall = you.head.y === 0
 
   const legalBoardMoves = []
-  if (!movingEast) legalBoardMoves.push(left)
-  if (!movingWest) legalBoardMoves.push(right)
-  if (!movingSouth) legalBoardMoves.push(up)
-  if (!movingNorth) legalBoardMoves.push(down)
+  if (!atWestWall && !movingEast) legalBoardMoves.push(left)
+  if (!atEastWall && !movingWest) legalBoardMoves.push(right)
+  if (!atNorthWall && !movingSouth) legalBoardMoves.push(up)
+  if (!atSouthWall && !movingNorth) legalBoardMoves.push(down)
 
   console.log('possible moves based on board edges:', legalBoardMoves.length)
 
