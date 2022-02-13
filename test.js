@@ -191,7 +191,7 @@ tap.test('avoid hitting the southeast corner, eastbound', function (t) {
 
   const expected = 'up'
   const result = move(game)
-  t.equal(result.move, expected)
+  t.equal(result.move, expected, 'should move up when traveling east into the southeast corner')
 
   t.end()
 })
@@ -219,7 +219,7 @@ tap.test('survive the northeast corner, northbound', function (t) {
 
   const expected = 'left'
   const result = move(game)
-  t.equal(result.move, expected)
+  t.equal(result.move, expected, 'should move left when traveling north into the northwest corner')
 
   t.end()
 })
@@ -247,7 +247,7 @@ tap.test('avoid hitting the northeast corner, eastbound', function (t) {
 
   const expected = 'down'
   const result = move(game)
-  t.equal(result.move, expected)
+  t.equal(result.move, expected, 'should move down when moving east into the northeast corner')
 
   t.end()
 })
