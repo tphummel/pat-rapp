@@ -55,7 +55,7 @@ tap.test('avoid hitting the north wall', function (t) {
   }
 
   const result = move(game)
-  t.ok(result.move === 'left' || result.move === 'right')
+  t.ok(result.move === 'left' || result.move === 'right', 'should move left or right when traveling northbound into the north wall')
   t.end()
 })
 
